@@ -3,10 +3,6 @@ require 'byebug'
 require "rest-client"
 class Movie < ActiveRecord::Base
     
-  movies = RestClient.get "http://www.omdbapi.com/?apikey=[bc20ec47]"
-
-  # apiey = bc20ec47
-  
-  
+  movies = RestClient.get "https://www.omdbapi.com/?i=tt3896198&apikey=bc20ec47&"
   # byebug 
 end
