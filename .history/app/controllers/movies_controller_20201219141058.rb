@@ -4,14 +4,10 @@ class MoviesController < ApplicationController
         @movie = Movie.all
         render json: @movie
     end
-
-    def new 
-        
-    end
     
 
     def show 
-        @movie = Movie.find_by(params[:id])
+        @movies = Movie.find_by(params[:id])
         render json: @movies
     end
 

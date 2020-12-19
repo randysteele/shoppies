@@ -4,10 +4,6 @@ class MoviesController < ApplicationController
         @movie = Movie.all
         render json: @movie
     end
-
-    def new 
-        
-    end
     
 
     def show 
