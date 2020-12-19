@@ -1,6 +1,5 @@
 require 'active_record'
 require 'byebug'
-require "rest-client"
 class Movie < ActiveRecord::Base
     
     # def movies
