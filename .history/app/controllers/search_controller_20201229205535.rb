@@ -1,5 +1,4 @@
 class SearchController < ApplicationController
-    require 'typhoeus'
 
     def index 
         search = params[:q]

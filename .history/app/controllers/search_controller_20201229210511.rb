@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
-    require 'typhoeus'
+    require 'Typhouse'
 
     def index 
         search = params[:q]
