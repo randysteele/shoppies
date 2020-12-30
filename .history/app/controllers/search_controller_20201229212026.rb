@@ -15,7 +15,7 @@ class SearchController < ApplicationController
      
    def movie
     
-    imdbid = params[:q]
+    Imdbid = params[:q]
     if Imdbid
         response = Typhoeus.get("http://www.omdbapi.com", params: {i: Imdbid})
         @movie = JSON.parse(response.body)

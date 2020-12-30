@@ -1,0 +1,6 @@
+<h1> Search </h1>
+
+<%= form_tag("/search", method: "get") do %>
+<%= text_field_tag(:q) %> <br><br>
+<%= submit_tag("Search Movies")%>
+<% end %>
