@@ -3,14 +3,13 @@ class SearchController < ApplicationController
   
 
     def index 
-        search = params[:q]
-        if search 
-            response = Typhoeus.get("http://www.omdbapi.com/?i=tt3896198&apikey=bc20ec47", params: {s: search})
-            @movies = JSON.parse(response.body).to_s
-     #        byebug
+        @search = params[:q]
+        if @search 
+            @response = Typhoeus.get("http://www.omdbapi.com/?i=tt3896198&apikey=bc20ec47", params: {s: @search})
+            @movies = JSON.parse(@response.body).to_s
+             byebug
         else
             @movies = []
-            render :index
         end
     end
      

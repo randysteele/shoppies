@@ -5,5 +5,5 @@
 <% end %>
 
 <% @movies.each do |movie| %>
-    <div>Title: <a href='/movie?q=<%= movie["imdbID"] %>'><%= movie["Title"] %></div> 
+	<div>Title: <a href='/movie?q=<%= movie["imdbID"].to_i %>'><%= movie["Title"] %></div>
 <% end %>

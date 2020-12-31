@@ -4,6 +4,6 @@
   <%= submit_tag("Search") %>
 <% end %>
 
-<% @movies.each do |movie| %>
+<% @search(@movies).each do |movie| %>
     <div>Title: <a href='/movie?q=<%= movie["imdbID"] %>'><%= movie["Title"] %></div> 
 <% end %>
