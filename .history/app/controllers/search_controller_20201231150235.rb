@@ -1,4 +1,4 @@
-#require 'typhoeus'
+require 'typhoeus'
 class SearchController < ApplicationController
   
 
@@ -6,8 +6,7 @@ class SearchController < ApplicationController
         @search = params[:q]
         if @search 
             @response = Typhoeus.get("http://www.omdbapi.com/?i=tt3896198&apikey=bc20ec47", params: {s: @search})
-            @movies = JSON.parse(@response.body)["Search"]
-        #    byebug
+            @movies = JSON.parse(@response.body).to_s
         else
             @movies = []
             render :index
