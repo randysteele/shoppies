@@ -6,7 +6,7 @@
 
 
 <% @movies.each do |movie| %>
-    <li><a href='/movie?q=<%= movie["imdbID"] %>'>Title: <%= movie["Title"] %><br>Year: <%=movie["Year"]%></li>
+    <li><a href='/movie?q=<%= movie["imdbID"] %>'><%= movie["Title"] %><br><%=movie["Year"]%></li>
 <% end %>
 
 
